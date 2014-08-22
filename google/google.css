@@ -1,0 +1,148 @@
+html, body, header section, ul, li, a, img, input {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: arial;
+}
+
+img {
+  display: block;
+}
+
+input {
+  -webkit-appearance: none;
+  outline: 0;
+}
+
+button {
+  -webkit-appearance: none;
+  border: none;
+  font-family: arial;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.nav {
+  padding-right: 20px;
+}
+
+.nav > li {
+  float: right;
+}
+
+.links-list > li {
+  float: left;
+  padding: 20px 7px;
+}
+
+.links-list > li > a {
+  color: #333;
+  font-size: 13px
+}
+
+.links-list > li > a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  margin: 0 auto;
+  margin-top: 112px;
+  width: 572px;
+}
+
+.logo {
+  height: 95px;
+  width: 269px;
+  margin: 10px auto;
+
+}
+
+.search-buttons-box {
+  margin: 5px auto;
+  text-align: center;
+}
+
+.search-buttons {
+  display: inline-block;
+}
+
+.search-buttons > li {
+  float: left;
+  margin: 10px;
+}
+
+.search-button {
+  padding: 8px;
+  border-radius: 2px;
+  background: #eee;
+  border: 1px solid #ccc;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.search-button:hover {
+  border: 1px solid #aaa;
+}
+
+.search-box {
+  width: 552px;
+  height: 20px;
+  border: 1px solid #ccc;
+  margin: 10px 0 3px 0;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.search-box:hover {
+  border: 1px solid #aaa;
+}
+
+.search-box:focus {
+  border: 1px solid blue;
+}
+
+.links-list > li > .signin-button {
+  padding: 8px 13px;
+  color: white;
+  background: #4285f4;
+  border-radius: 2px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.links-list > li > .signin-button:hover {
+  cursor: default;
+  text-decoration: none;
+}
+
+.links-list > li:nth-child(4) > a {
+  text-decoration: none;
+}
+
+.apps {
+  width: 30px;
+  height: 30px;
+  margin-top: -6px;
+  background: url("sprite_sheet.png") center;
+  background-position: -51px -452px;;
+  opacity: 0.5;
+  background-size: 112px 1828px;
+  color: transparent;
+}
+
+.apps:hover {
+  opacity: 1.0;
+}
+
