@@ -1,0 +1,64 @@
+html, body, div, article, section, ul, li, p, img, a, strong {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.timestamp {
+  color: #999;
+}
+
+.posts {
+  width: 480px;
+  border: 5px solid #ddd;
+  margin: 50px auto;
+}
+
+.post {
+  border: 5px solid #ddd;
+}
+
+.post-header {
+  border-bottom: 3px solid #ddd;
+  padding: 10px;
+}
+
+.post-header-list:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.post-header-list > li {
+  float: left;
+  display: block;
+  margin: 10px;
+
+}
+
+.post-body {
+  padding: 20px;
+}
+
+.header-image {
+  border: 2px solid blue;
+}

@@ -1,0 +1,169 @@
+html, body, header, nav, ul, li, a, strong, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  display: inline;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.page-header {
+  background-color: red;
+  border-bottom: 3px solid black;
+}
+
+.header-nav {
+  width: 900px;
+  margin: 0 auto;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+.footer-nav {
+  background-color: #ddd;
+  width: 900px;
+  margin: 0 auto;
+  border: 3px solid #ccc;
+}
+
+.container {
+  width: 860px;
+  margin: 0 auto;
+  border-left: 3px solid #ddd;
+  border-right: 3px solid #ddd;
+  padding: 20px 20px;
+}
+
+.sidebar {
+  width: 200px;
+  float: left;
+  padding-right: 20px;
+  border-right: 3px solid #ddd;
+}
+
+.content {
+  width: 597px;
+  float: left;
+  margin-left: 10px;
+  padding: 0 0 0 30px;
+}
+
+.footer-nav-list {
+  padding: 0 10px;
+}
+
+.group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.logo a {
+  float: left;
+  padding: 10px 20px;
+  display: block;
+  color: white;
+}
+
+.links {
+  float: right;
+}
+
+.header-links-list > li {
+  float: left;
+  border-left: 3px solid black;
+}
+
+.footer-links-list > li {
+  float: left;
+}
+
+.header-links-list > li > a {
+  padding: 10px 20px;
+  display: block;
+  color: white;
+  background-color: red;
+}
+
+.header-links-list > li > a:hover {
+  background-color: black;
+}
+
+.badge {
+  background-color: black;
+  border-radius: 500px;
+  font-size: 12px;
+  padding: 6px 10px 6px 10px;
+  width: 100%;
+}
+
+.footer-links-list > li > a {
+  padding: 20px 10px;
+  display: block;
+  color: #999;
+}
+
+.copyright {
+  float: left;
+}
+
+.copyright p {
+  padding: 20px 10px;
+  display: block;
+  color: #999;
+}
+
+.notifications-parent {
+  position: relative;
+}
+
+.notifications-list {
+  position: absolute;
+  left: -3px;
+  display: none;
+  z-index: 999;
+  border: 3px solid black;
+}
+
+.notification-item {
+  border-bottom: 3px solid black;
+  width: 300px;
+  background: white;
+}
+
+.notification-item > a {
+  padding: 10px 20px;
+  display: block;
+}
+
+.notifications-list li:last-child {
+  border-bottom: 0;
+}
+
+.notifications-parent:hover > .notifications-list {
+  display: block;
+}
+
+.notification-item > a:hover {
+  background: black;
+  color: white;
+}
