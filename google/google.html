@@ -2,50 +2,90 @@
 <html>
   <head>
     <link rel="stylesheet" href="google.css" type="text/css">
+    <script src="jquery-1.11.1.js"></script>
+    <script src="google.js"></script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
   </head>
   <body>
-    <header>
-      <ul class="nav group">
-        <li>
-          <ul class="links-list group">
-            <li><a href="#">+You</a></li>
-            <li><a href="#">Gmail</a></li>
-            <li><a href="#">Images</a></li>
-            <li>
-              <a href="#">
-                <div class="apps">Apps</div>
-              </a>
-              <div>
-                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-
-                  <li></li>
-                  <li></li>
-                  <li></li>
-
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-              </div>
-            </li>
-            <li><a class="signin-button" href="#">Sign In</a></li>
-          </ul>
-        <li>
-      </ul>
-    </header>
-
-    <section class="content">
-      <img class="logo" src="logo.png">
-      <input type="text" class="search-box">
-      <div class="search-buttons-box">
-        <ul class="search-buttons group">
-          <li><button class="search-button">Google Search</button></li>
-          <li><button class="search-button">I'm Feeling Lucky</button></li>
+    <div id="container">
+      <header>
+        <ul class="nav group">
+          <li>
+            <ul class="links-list group">
+              <li><a href="https://plus.google.com/?gpsrc=ogpy0&tab=wX">+You</a></li>
+              <li><a href="https://mail.google.com/mail/?tab=wm">Gmail</a></li>
+              <li><a href="https://www.google.com/imghp?hl=en&tab=wi&ei=syD5U5SuO-mmsASr64G4Bw&ved=0CAQQqi4oAg">Images</a></li>
+              <li class="apps-parent">
+                <button class="apps">Apps</button>
+              </li>
+              <li><a class="signin-button" href="https://accounts.google.com/ServiceLogin?hl=en&continue=https://www.google.com/">Sign In</a></li>
+            </ul>
+          <li>
         </ul>
-      </div>
-    </section>
+      </header>
+
+      <section class="content">
+        <img class="logo" src="logo.png">
+        <div class="search-box-container">
+          <ul class="search-box-list group">
+            <li><input type="text" class="search-box"></li>
+            <li class="microphone"></li>
+          </ul>
+        </div>
+        <div class="search-buttons-box">
+          <ul class="search-buttons group">
+            <li><button class="search-button search">Google Search</button></li>
+            <li><button class="search-button lucky">I'm Feeling Lucky</button></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cycle-slideshow slides" data-cycle-slides="span">
+        <span>I'm Feeling Stellar</span>
+        <span>I'm Feeling Trendy</span>
+        <span>I'm Feeling Playful</span>
+        <span>I'm Feeling Generous</span>
+      </section>
+
+      <footer class="footer">
+        <ul class="footer-lists">
+          <li class="footer-left">
+            <ul class="footer-left-list group">
+              <li><a href="https://www.google.com/intl/en/ads/?fg=1">Advertising</a></li>
+              <li><a href="https://www.google.com/services/?fg=1">Business</a></li>
+              <li><a href="https://www.google.com/intl/en/about.html?fg=1">About</a></li>
+            </ul>
+          </li>
+
+          <li class="footer-right">
+            <ul class="footer-right-list group">
+              <li><a href="https://www.google.com/intl/en/policies/?fg=1">Privacy & Terms</a></li>
+              <li><a href="https://www.google.com/preferences?hl=en">Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+      <footer>
+    </div>
+
+    <div class="apps-div">
+      <ul class="apps-list group">
+        <li class="app-item">
+          <a href="#">
+            <span class="app-background gplus">Some text</span>
+            <span class="app-text">+ You</span>
+          </a>
+        </li>
+        <li class="app-item app-background search"></li>
+        <li class="app-item app-background youtube"></li>
+
+        <li class="app-item app-background maps"></li>
+        <li class="app-item app-background play"></li>
+        <li class="app-item app-background news"></li>
+
+        <li class="app-item app-background gmail"></li>
+        <li class="app-item app-background drive"></li>
+        <li class="app-item app-background calendar"></li>
+      </ul>
+    </div>
   </body>
 </html>

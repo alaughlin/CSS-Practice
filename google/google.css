@@ -1,8 +1,12 @@
-html, body, header section, ul, li, a, img, input {
+html, body, header, footer, section, ul, li, a, img, input, span {
   padding: 0;
   margin: 0;
   border: 0;
   font-family: arial;
+}
+
+html, body {
+  height: 100%;
 }
 
 img {
@@ -16,8 +20,11 @@ input {
 
 button {
   -webkit-appearance: none;
-  border: none;
-  font-family: arial;
+  outline: 0;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 ul {
@@ -32,6 +39,12 @@ a {
   content: "";
   clear: both;
   display: block;
+}
+
+#container {
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .nav {
@@ -60,6 +73,8 @@ a {
   margin: 0 auto;
   margin-top: 112px;
   width: 572px;
+  padding-bottom: 41px;
+  min-height: 300px;
 }
 
 .logo {
@@ -80,7 +95,7 @@ a {
 
 .search-buttons > li {
   float: left;
-  margin: 10px;
+  margin: 7px;
 }
 
 .search-button {
@@ -93,23 +108,59 @@ a {
 }
 
 .search-button:hover {
+  border: 1px 1px 0 1px solid #aaa;
+  border-bottom: 2px solid #aaa;
+}
+
+.search-button:active {
   border: 1px solid #aaa;
+}
+
+.search-box-container {
+  margin: 10px 0 10px 0;
+  width: 570px;
+  height: 32px;
+  border: 1px solid #ccc;
+}
+
+.search-box-list > li {
+  float: left;
+}
+
+.search-box-list > li.microphone {
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.microphone {
+  height: 23px;
+  width: 17px;
+  background: url(data:image/gif;base64,R0lGODlhHAAmAKIHAKqqqsvLy0hISObm5vf394uLiwAAAP///yH5BAEAAAcALAAAAAAcACYAAAO9eLpMIMYIQJi9DcYtKv6KtnHgB4yoAZSXKAyDy1rjoAzjzOQLrx8+4OanCAZnxiExGSEKmz3lj2lwUq3SZ3WZPbKuXGgxu9t4tLYDTkpIRQILF0x2G4lWipM7gj/oJQUkcXsCDCIFATULBCIcZ2tvB3QLDxETFnR/BgU/gRt9jX0gnpYMkJZpFzEoqQqJKAIBaQOVKHAXr3t7txgBjboSvB8EpLoFZywOAo3LFE5lYs/QW9LT1TRk1V7S2xYJADs=) no-repeat center;
+  background-size: 14px 19px;
+  opacity: 0.5;
+}
+
+.microphone:hover {
+  opacity: 1.0;
 }
 
 .search-box {
-  width: 552px;
+  width: 528px;
   height: 20px;
-  border: 1px solid #ccc;
-  margin: 10px 0 3px 0;
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px 10px;
 }
 
-.search-box:hover {
+.search-box-container:hover {
   border: 1px solid #aaa;
 }
 
-.search-box:focus {
+.focus {
+  border: 1px solid blue;
+}
+
+.search-box-container.focus:hover {
   border: 1px solid blue;
 }
 
@@ -123,8 +174,10 @@ a {
 }
 
 .links-list > li > .signin-button:hover {
-  cursor: default;
   text-decoration: none;
+}
+.links-list > li > .signin-button:active {
+  background: #3c7ae4;
 }
 
 .links-list > li:nth-child(4) > a {
@@ -136,13 +189,176 @@ a {
   height: 30px;
   margin-top: -6px;
   background: url("sprite_sheet.png") center;
-  background-position: -51px -452px;;
+  background-position: -51px -452px;
   opacity: 0.5;
   background-size: 112px 1828px;
   color: transparent;
+  cursor: default;s
 }
 
 .apps:hover {
   opacity: 1.0;
 }
 
+.apps-parent {
+  position: relative;
+}
+
+.apps-div:after {
+  content: "";
+  display: block;
+  position: absolute;
+
+  top: -6px;
+  right: 92px;
+  margin-left: -10px;
+
+  width: 10px;
+  height: 10px;
+
+  background: white;
+
+  border-left: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+
+  -moz-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+}
+
+.apps-div {
+  display: none;
+  position: absolute;
+  top: 64px;
+  right: 28px;
+  width: 320px;
+  border: 1px solid #aaa;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.show {
+  display: block;
+}
+
+.apps-list {
+  padding: 25px;
+  margin: 10px;
+}
+
+.app-item {
+  float: left;
+}
+
+.app-item > a {
+  padding: 10px;
+  width: 66px;
+  height: 80px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+.app-item > a > span {
+  display: block;
+}
+
+.app-item > a:hover {
+  border: 1px solid #ccc;
+}
+
+.app-background {
+  background: url("sprite_sheet.png") center;
+  background-size: 112px 1828px;
+  font-size: 0px;
+}
+
+.app-text {
+  display: block;
+  text-align: center;
+}
+
+.gplus {
+  background-position: 0 -1500px;
+}
+
+.search {
+  background-position: 0 -763px;
+}
+
+.youtube {
+  background-position: 0 -1224px;
+}
+
+.maps {
+  background-position: -35px -245px;
+}
+
+.play {
+  background-position: 0 -637px;
+}
+
+.news {
+  background-position: 0 -1155px;
+}
+
+.gmail {
+background-position: 0 -832px;
+}
+
+.drive {
+background-position: 0 0;
+}
+
+.calendar {
+background-position: 0 -1086px;
+}
+
+.footer {
+  background: #eee;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid #eee;
+  height: 40px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float: right;
+}
+
+.footer-left {
+  margin-left: 30px;
+  padding-top: 10px;
+}
+
+.footer-left-list > li {
+  float: left;
+}
+
+.footer-left-list > li > a {
+  padding: 0 31px 15px 0;
+  font-size: 13px;
+  color: #333;
+}
+
+.footer-right {
+  margin-right: 30px;
+  padding-top: 10px;
+}
+
+.footer-right-list > li {
+  float: left;
+}
+
+.footer-right-list > li > a {
+  padding: 0 0 15px 31px;
+  font-size: 13px;
+  color: #333;
+}
